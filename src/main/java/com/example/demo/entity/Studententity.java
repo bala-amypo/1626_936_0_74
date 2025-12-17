@@ -1,11 +1,11 @@
-package com.example.demo.entity
-import java.sql.Date
-import jakarta.persistence.Entityimport jakarta.persistence.id;
-import jakarta.persistence
+package com.example.demo.Entity;
+import java.util.Date;
+import jakarta.persistence.Entity;
+import jakarta.persistence.id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
-
-
 public class Studententity{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
