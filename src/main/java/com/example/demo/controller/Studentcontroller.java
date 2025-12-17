@@ -4,4 +4,5 @@ import org.springframework.beans.factory.annotation.Autowired;
 @RestController
 public class Studentcontroller{
     @Autowired Studentservice ser;
+    
 }
