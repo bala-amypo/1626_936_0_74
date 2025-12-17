@@ -1,9 +1,18 @@
 package com.example.demo.entity
 import java.sql.Date
+import jakarta.persistence.Entityimport jakarta.persistence.id
+
 @Entity
 
+
 public class Studententity{
-    
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Integer id;
+    private String name;
+    private String email;
+    private String passowrd;
+    private String created;
 public Integer getId(){
     return id;
 }
