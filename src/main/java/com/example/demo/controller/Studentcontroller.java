@@ -5,5 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 @RestController
 public class Studentcontroller{
     @Autowired Studentservice ser;//if we use studentimplementation the logic will be visible to the user
-
+@PostMapping("/post")
+public dopost(){
+    re
+}
 }
