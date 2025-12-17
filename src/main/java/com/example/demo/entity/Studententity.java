@@ -1,6 +1,7 @@
 package com.example.demo.entity
 import java.sql.Date
-import jakarta.persistence.Entityimport jakarta.persistence.id
+import jakarta.persistence.Entityimport jakarta.persistence.id;
+import jakarta.persistence
 
 @Entity
 
@@ -12,7 +13,7 @@ public class Studententity{
     private String name;
     private String email;
     private String passowrd;
-    private String created;
+    private Date created;
 public Integer getId(){
     return id;
 }
@@ -43,6 +44,16 @@ public String getDate(){
 public void setDate(Date created){
     this.created=created;
 }
+public Studententity(){
 
+}
+public Studententity(Integer id,String name, String email,String passowrd,Date created){
+this.id=id;
+this.name=name;
+this.email=email;
+this.passowrd=password;
+this.created=created;
+
+}
     
 }
