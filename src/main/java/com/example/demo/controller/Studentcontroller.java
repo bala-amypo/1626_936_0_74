@@ -9,7 +9,7 @@ import com.example.demo.service.Studentservice;
 
 @RestController
 public class Studentcontroller{
-    @Autowired Studentservice ser;//if we use studentimplementation the logic will be visible to the user
+    @Autowired Studentservice ser;
 @PostMapping("/post")
 public Studententity dopost(@RequestBody Studententity stu){
     return ser.postdata(stu);
