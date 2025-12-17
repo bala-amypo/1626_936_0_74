@@ -11,7 +11,7 @@ public class Studententity{
     private Integer id;
     private String name;
     private String password;
-    private String email;
+    private String email;         
     private Date created;
     public Integer getId(){
         return id;
