@@ -33,4 +33,6 @@ public String deletevalue(@PathVariable int id){
 public Studententity findvalue(@PathVariable int id){
     return ser.findData(id);
 }
+@PutMapping("/put/{id}")
+public Studententity putvalue(@)
 }
