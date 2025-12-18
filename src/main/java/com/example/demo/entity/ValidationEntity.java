@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -25,7 +26,7 @@ public class ValidationEntity{
  private Sring password;
  @Positive(msg="Age must be positive")
  @Max(30)
- NotNull
+ @NotNull
  private int age;
  public Long getId(){
         return id;
