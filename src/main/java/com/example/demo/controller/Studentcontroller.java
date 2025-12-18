@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.example.demo.entity.Studententity;
 import com.example.demo.service.Studentservice;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -34,5 +35,7 @@ public Studententity findvalue(@PathVariable int id){
     return ser.findData(id);
 }
 @PutMapping("/put/{id}")
-public Studententity putvalue(@)
+public Studententity putvalue(@PathVariable int id, @RequestBody Studententity entity){
+    return ser.UpdateData(id,entity);
+}
 }
