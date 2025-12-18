@@ -33,7 +33,7 @@ public Studententity findData(int id){
     return student.findById(id).orElse(null);
 }
 @Override
-public Studentity UpdateData(int id, Studententity entity){
+public Studententity UpdateData(int id, Studententity entity){
       if(student.existsById(id)){
          entity.setId(id);
          return student.save(entity);
