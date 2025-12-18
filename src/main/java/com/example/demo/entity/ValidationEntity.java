@@ -17,14 +17,14 @@ public class ValidationEntity{
     @GeneratedValue(strategy=GenerationType.IDENTITY)
  private Long id;
  @NotNull
- @Size(min=2,max=10,msg="must be 2 to 10 character")
+ @Size(min=2,max=10,message="must be 2 to 10 character")
  private String username;
- @Email(msg="Email is not Valid")
+ @Email(message="Email is not Valid")
  private String email;
- @Size(min=2,max=10,msg="must be 2 to 10 character")
- @NotNull(msg="Password is mandatory")
- private Sring password;
- @Positive(msg="Age must be positive")
+ @Size(min=2,max=10,message="must be 2 to 10 character")
+ @NotNull(message="Password is mandatory")
+ private String password;
+ @Positive(message="Age must be positive")
  @Max(30)
  @NotNull
  private int age;
@@ -59,10 +59,10 @@ public class ValidationEntity{
     this.age=age;
    }
    public ValidationEntity(Long id,
-   @NotNull @Size(min=2,max=10,msg="must be 2 to 10 character") String username,
-   @Size(min=2,max=10,msg="must be 2 to 10 character")@NotNull(msg="Password is mandatory") String password ,
-   @Email(msg="Email is not Valid")String email , 
-   @Positive(msg="Age must be positive") @Max(30) @NotNull int age){
+   @NotNull @Size(min=2,max=10,message="must be 2 to 10 character") String username,
+   @Size(min=2,max=10,message="must be 2 to 10 character")@NotNull(message="Password is mandatory") String password ,
+   @Email(message="Email is not Valid")String email , 
+   @Positive(message="Age must be positive") @Max(30) @NotNull int age){
            this.id=id;
            this.username=username;
            this.password=password;
