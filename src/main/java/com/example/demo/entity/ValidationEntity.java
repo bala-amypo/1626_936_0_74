@@ -27,7 +27,7 @@ public class ValidationEntity{
  @Max(30)
  NotNull
  private int age;
- public Lo getId(){
+ public Long getId(){
         return id;
     }
     public void setId(Integer id){
@@ -57,12 +57,16 @@ public class ValidationEntity{
    public void setAge(int age){
     this.age=age;
    }
-   public Studententity(Integer id, String name, String password , String email , Date created){
+   public Studententity(Long id,
+   @NotNull @Size(min=2,max=10,msg="must be 2 to 10 character") String username,
+   @Size(min=2,max=10,msg="must be 2 to 10 character")@NotNull(msg="Password is mandatory") String password ,
+   @Email(msg="Email is not Valid")String email , 
+   @Positive @Max(30) @NotNull int age){
            this.id=id;
            this.name=name;
            this.password=password;
            this.email=email;
-           this.created=created;
+           this.age=age;
    }
    public Studententity(){
    }
