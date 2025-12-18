@@ -29,4 +29,5 @@ public List<Studententity>getvalue(){
 public String deletevalue(@PathVariable int id){
     return ser.DeleteData(id);
 }
+@
 }
