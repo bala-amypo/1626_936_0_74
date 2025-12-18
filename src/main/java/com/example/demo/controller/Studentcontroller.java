@@ -30,5 +30,7 @@ public String deletevalue(@PathVariable int id){
     return ser.DeleteData(id);
 }
 @GetMapping("/find/{id}")
-public Studententity finddata(@PathVariable)
+public Studententity findvalue(@PathVariable int id){
+    return ser.findData(id);
+}
 }
