@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.example.demo.entity.Studententity;
 import com.example.demo.service.Studentservice;
+import org.springframework.web.bind.annotation.GetMapping;
 
 
 @RestController
@@ -15,5 +16,9 @@ public Studententity dopost(@RequestBody Studententity stu){
     return ser.postdata(stu);
 
 
+}
+@GetMapping("/get")
+public List<Studententity>getvalue(){
+    return ser.getAllData()
 }
 }
