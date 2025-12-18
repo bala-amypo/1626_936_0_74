@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.example.demo.entity.Studententity;
 import com.example.demo.service.Studentservice;
 import org.springframework.web.bind.annotation.GetMapping;
+import java.util.List;
 
 
 @RestController
@@ -19,6 +20,6 @@ public Studententity dopost(@RequestBody Studententity stu){
 }
 @GetMapping("/get")
 public List<Studententity>getvalue(){
-    return ser.getAllData()
+    return ser.getAllData();
 }
 }
