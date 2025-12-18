@@ -1,7 +1,7 @@
 package com.example.demo.service.Impl;
 import org.springframework.stereotype.Service;
 import com.example.demo.service.Validationservice;
-import  com.example.demo.entity.Validationentity;
+import  com.example.demo.entity.ValidationEntity;
 import  com.example.demo.repository.ValidationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Validationserviceimpl implements Validationservice{
       @Autowired ValidationRepository student;
       @Override
- public Validationentity postdata(Validationentity validate){
+ public ValidationEntity postdata(ValidationEntity validate){
     return student.save(validate);
  }
 
