@@ -23,7 +23,7 @@ public class ValidationEntity{
  @Size(min=2,max=10,msg="must be 2 to 10 character")
  @NotNull(msg="Password is mandatory")
  private Sring password;
- @Positive
+ @Positive(msg="Age must be positive")
  @Max(30)
  NotNull
  private int age;
@@ -57,18 +57,18 @@ public class ValidationEntity{
    public void setAge(int age){
     this.age=age;
    }
-   public Studententity(Long id,
+   public Validationentity(Long id,
    @NotNull @Size(min=2,max=10,msg="must be 2 to 10 character") String username,
    @Size(min=2,max=10,msg="must be 2 to 10 character")@NotNull(msg="Password is mandatory") String password ,
    @Email(msg="Email is not Valid")String email , 
-   @Positive @Max(30) @NotNull int age){
+   @Positive(msg="Age must be positive") @Max(30) @NotNull int age){
            this.id=id;
-           this.name=name;
+           this.username=username;
            this.password=password;
            this.email=email;
            this.age=age;
    }
-   public Studententity(){
+   public Validationentity(){
    }
 }
 
