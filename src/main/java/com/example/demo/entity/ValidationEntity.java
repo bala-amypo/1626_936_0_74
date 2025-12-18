@@ -31,7 +31,7 @@ public class ValidationEntity{
  public Long getId(){
         return id;
     }
-    public void setId(Integer id){
+    public void setId(Long id){
        this.id=id;
     }
    public String getName(){
@@ -52,10 +52,10 @@ public class ValidationEntity{
    public void setEmail(String email){
     this.email=email;
    }
-    public void getAge(){
+    public int getAge(){
     return age;
    }
-   public void setAge(int age){
+   public int setAge(int age){
     this.age=age;
    }
    public ValidationEntity(Long id,

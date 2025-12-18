@@ -13,7 +13,7 @@ public class Validationcontroller{
     @Autowired Validationservice val;
 @PostMapping("/postt")
 public ValidationEntity dopost(@Valid @RequestBody ValidationEntity validate){
-    return val.postdata(val);
+    return val.postdata(validate);
 
 
 }
