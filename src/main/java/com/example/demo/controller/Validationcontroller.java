@@ -20,7 +20,7 @@ public ValidationEntity dopost(@Valid @RequestBody ValidationEntity validate){
 }
 
 @GetMapping("/findd/{id}")
-public ValidationEntentity findvalue(@PathVariable int id){
+public ValidationEntentity findvaluee(@PathVariable int id){
     return ser.finddData(id);
 }
 
