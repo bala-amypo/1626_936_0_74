@@ -16,7 +16,7 @@ public class Studentimpl implements Student{
       //deleteById()
       //existsById()
       @Override
- public Student postdata(Studentstu){
+ public Student postdata(Student stu){
     return student.save(stu);
  }
  
