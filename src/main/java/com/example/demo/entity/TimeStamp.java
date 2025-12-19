@@ -30,9 +30,13 @@ public class TimeStamp{
     private LocalDateTime UpdateAt;
     @PrePersist
     public void Oncreate(){
-    LocalDateTime now=new LocalDateTime();
+    LocalDateTime now= LocalDateTime().now();
     this.CreateAt=CreateAt;
     this.UpdateAt=UpdateAt;
+    }
+    @PreUpdate
+    public void Onupdate(){
+        
     }
 
 }
