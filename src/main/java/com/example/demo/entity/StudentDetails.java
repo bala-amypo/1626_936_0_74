@@ -14,6 +14,8 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.JoinColumn;
 
 
 @Entity
@@ -29,6 +31,7 @@ public class StudentDetails{
     private String StudentIdCard;
     private int idno;
     @OneToOne
+    @JoinColumn(name="")
     private  StudentDetails student;
 
 
