@@ -24,22 +24,11 @@ import jakarta.persistence.PreUpdate;
 public class Student{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-   
+  
     private String Name;
-    private String ;
-    private LocalDateTime CreateAt;
-    private LocalDateTime UpdateAt;
-    @PrePersist
+    private int RegNo;
+    private String Address;
    
-    public void Oncreate(){
-    LocalDateTime now= LocalDateTime.now();
-    this.CreateAt=now;
-    this.UpdateAt=now;
-    }
-    @PreUpdate
-    public void Onupdate(){
-    LocalDateTime now= LocalDateTime.now();
-    this.UpdateAt=now;
-    }
+    
 
 }
