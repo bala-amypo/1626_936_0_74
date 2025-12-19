@@ -22,7 +22,7 @@ public ValidationEntity dopost(@Valid @RequestBody ValidationEntity validate){
 
 @GetMapping("/findd/{id}")
 public ValidationEntentity findvaluee(@PathVariable int id){
-    return ser.finddData(id).orElseThrow(()->new ValidationException(null));
+    return ser.finddData(id).orElseThrow(()->new ValidationException("Invalid id"+id));
 }
 
 }
