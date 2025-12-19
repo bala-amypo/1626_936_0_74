@@ -13,6 +13,7 @@ import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 
 @Entity
 @Data
@@ -31,12 +32,12 @@ public class TimeStamp{
     @PrePersist
     public void Oncreate(){
     LocalDateTime now= LocalDateTime().now();
-    this.CreateAt=CreateAt;
-    this.UpdateAt=UpdateAt;
+    this.CreateAt=now;
+    this.UpdateAt=now;
     }
     @PreUpdate
     public void Onupdate(){
-        
+        this.UpdateAt=now;
     }
 
 }
