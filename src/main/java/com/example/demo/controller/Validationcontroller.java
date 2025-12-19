@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.example.demo.entity.ValidationEntity;
 import com.example.demo.service.Validationservice;
 import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.PathVariable;
 
 
 @RestController
@@ -21,7 +22,7 @@ public ValidationEntity dopost(@Valid @RequestBody ValidationEntity validate){
 
 @GetMapping("/findd/{id}")
 public ValidationEntentity findvaluee(@PathVariable int id){
-    return ser.finddData(id);
+    return ser.finddData(id).orElseThrow(()->new ValidationException(null));
 }
 
 }
