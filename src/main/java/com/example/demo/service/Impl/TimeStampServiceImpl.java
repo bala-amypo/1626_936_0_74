@@ -12,11 +12,11 @@ public class TimeStampServiceImpl implements TimeStampService{
       @Autowired TimeStampRepository student;
       
       @Override
- public TimeStamp postdata(TimeStamp stuuu){
+ public TimeStamp posttdata(TimeStamp stuuu){
     return student.save(stuuu);
  }
  @Override
-    public List<TimeStamp>getAllData(){
+    public List<TimeStamp>getAllDataa(){
       return student.findAll();
      }
 
