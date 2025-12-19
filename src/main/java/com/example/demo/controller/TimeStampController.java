@@ -14,16 +14,16 @@ import java.util.List;
 
 
 @RestController
-public class Studentcontroller{
-    @Autowired Studentservice ser;
-@PostMapping("/post")
-public Studententity dopost(@RequestBody Studententity stu){
-    return ser.postdata(stu);
+public class TimeStampController{
+    @Autowired TimeStampService ser;
+@PostMapping("/posttt")
+public TimeStamp dopost(@RequestBody TimeStamp stuuu){
+    return ser.posttdata(stuuu);
 
 
 }
-@GetMapping("/get")
-public List<Studententity>getvalue(){
-    return ser.getAllData();
+@GetMapping("/gettt")
+public List<TimeStamp>getvalue(){
+    return ser.getAllDataa();
 }
 }
