@@ -24,10 +24,11 @@ import jakarta.persistence.PreUpdate;
 public class Student{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-  
+    private Integer id;
     private String Name;
-    private int RegNo;
     private String Address;
+    private String email;
+
    
     
 
