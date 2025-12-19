@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.example.demo.exception.ValidationException;
 
 @Service
-public class ValidationServiceImpl implements ValidationService{
+public class Validationserviceimpl implements ValidationService{
       @Autowired ValidationRepository student;
       //save()
       //findall()
