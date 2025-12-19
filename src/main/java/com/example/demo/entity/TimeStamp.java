@@ -28,6 +28,11 @@ public class TimeStamp{
     private String Email;
     private LocalDateTime CreateAt;
     private LocalDateTime UpdateAt;
-    @
+    @PrePersist
+    public void Oncreate(){
+    LocalDateTime now=new LocalDateTime();
+    this.CreateAt=CreateAt;
+    this.UpdateAt=UpdateAt;
+    }
 
 }
