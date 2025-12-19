@@ -31,7 +31,7 @@ public class StudentDetails{
     private String StudentIdCard;
     private int idno;
     @OneToOne
-    @JoinColumn(name="")
+    @JoinColumn(name="StudentIdCard")
     private  StudentDetails student;
 
 
