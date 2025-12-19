@@ -8,36 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 @Service
-public class Studentserviceimpl implements Studentservice{
-      @Autowired StudentRepository student;
+public class StudentDetailsimpl implements StudentDetails{
+      @Autowired StudentDetailsRepository student;
       //save()
       //findall()
       //findById()
       //deleteById()
       //existsById()
       @Override
- public Studententity postdata(Studententity stu){
+ public StudentDetails postdata(StudentDetails stu){
     return student.save(stu);
  }
- @Override
-    public List<Studententity>getAllData(){
-      return student.findAll();
-     }
-@Override
-     public String DeleteData( int id){
-          student.deleteById(id);
-          return "Deleted Sucessfully";
-     }
-@Override
-public Studententity findData(int id){
-    return student.findById(id).orElse(null);
-}
-@Override
-public Studententity UpdateData(int id, Studententity entity){
-      if(student.existsById(id)){
-         entity.setId(id);
-         return student.save(entity);
-      }
-      return null;
-}
+ 
  }
