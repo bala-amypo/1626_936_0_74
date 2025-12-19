@@ -4,7 +4,7 @@ import com.example.demo.service.Validationservice;
 import  com.example.demo.entity.ValidationEntity;
 import  com.example.demo.repository.ValidationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.example.demo.exception.ValidationException;
+import com.example.demo.Exception.ValidationException;
 
 
 @Service
